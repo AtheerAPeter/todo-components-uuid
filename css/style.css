@@ -47,6 +47,19 @@
   transform: scale(1.002) translateY(-5px);
 }
 
+.cards-grid {
+  padding-top: 20px;
+  list-style-type: none;
+  background-color: rgb(241, 210, 225);
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+.api-card {
+  margin: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 @media screen and (max-width: 1000px) {
