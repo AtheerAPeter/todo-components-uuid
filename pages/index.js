@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Button, Row, Col } from "antd";
+import { FileImageOutlined } from "@ant-design/icons";
 
 //components imports
 import Card from "../components/card";
@@ -18,6 +20,17 @@ export default function Home() {
   return (
     <div>
       <div className="container">
+        <Row>
+          <Col span={4} offset={20}>
+            <Button
+              icon={<FileImageOutlined />}
+              style={{ width: "100%" }}
+              href="bar"
+            >
+              Gallery
+            </Button>
+          </Col>
+        </Row>
         <TodoForm
           todos={todos}
           todo={todo}
