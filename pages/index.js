@@ -17,6 +17,10 @@ export default function Home() {
     }
   }, []);
 
+  const scrollEnd = (e) => {
+    if (e) e.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       <div className="container">
@@ -37,15 +41,21 @@ export default function Home() {
           setTodos={setTodos}
           setTodo={setTodo}
         />
-        {todos.map((item, index) => (
-          <Card
-            item={item.name}
-            index={item.id}
-            todos={todos}
-            setTodos={setTodos}
-            key={index}
-          />
-        ))}
+        <div className="cards">
+          {todos.map((item, index) => (
+            <Card
+              item={item.name}
+              index={item.id}
+              todos={todos}
+              setTodos={setTodos}
+              key={index}
+            />
+          ))}
+          <div
+            style={{ float: "left", clear: "both" }}
+            ref={(e) => scrollEnd(e)}
+          ></div>
+        </div>
       </div>
     </div>
   );
