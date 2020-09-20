@@ -21,7 +21,7 @@ export default function Home() {
     <div>
       <div className="container">
         <Row>
-          <Col span={4} offset={20}>
+          <Col span={7} offset={17}>
             <Button
               icon={<FileImageOutlined />}
               style={{ width: "100%" }}
