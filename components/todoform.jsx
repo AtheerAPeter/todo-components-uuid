@@ -27,9 +27,7 @@ const TodoForm = ({ todo, todos, setTodos, setTodo }) => {
               type="primary"
               icon={<DeleteOutlined />}
               danger
-            >
-              All
-            </Button>
+            ></Button>
           </Col>
           <Col span={18}>
             <Input
