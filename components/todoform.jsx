@@ -39,7 +39,7 @@ const TodoForm = ({ todo, todos, setTodos, setTodo }) => {
           <Col span={3}>
             <Button
               onClick={() => {
-                if (todo == "") return;
+                if (todo == []) return;
                 const newItem = [...todos, { name: todo, id: uuid() }];
                 setTodos(newItem);
                 localStorage.setItem("todos", JSON.stringify(newItem));
